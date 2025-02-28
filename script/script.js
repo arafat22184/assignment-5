@@ -66,7 +66,7 @@ for (let i = 0; i < completeBtn.length; i++){
 // Clear History
 document.getElementById('clearHistory').addEventListener('click', function () {
   activityHistory.innerHTML = ``;
-})
+});
 
 
 // DiscoverBtn
@@ -87,7 +87,7 @@ function todayDate() {
     let date = new Date();
     let formatDate = { month: "short", day: "numeric", year: "numeric" };
     return date.toLocaleDateString("en-US", formatDate).replace(',', '');
-}
+};
 
 document.getElementById('dateContainer').innerHTML = `
     <p class="text-xl">${todayDay},</p>
@@ -111,4 +111,4 @@ document.getElementById('theme-clr').addEventListener('click', function () {
     docBody.classList.add('bg-slate-200');
     count = 0;
   }
-})
+});
