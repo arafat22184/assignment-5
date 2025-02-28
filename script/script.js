@@ -11,6 +11,16 @@ let convertedDevBoardCount = parseInt(devBoardCount.innerText);
 // Activity Log
 let activityHistory = document.getElementById('activityHistory');
 
+// CardTitle
+
+// CardTime
+function formatDate() {
+    const now = new Date();
+    const options = { hour: 'numeric', minute: 'numeric', hour12: true };
+    const timeString = now.toLocaleTimeString('en-US', options);
+    return `Today ${timeString}`;
+}
+
 
 for (let i = 0; i < completeBtn.length; i++){
   const compBtn = completeBtn[i];
@@ -35,12 +45,27 @@ for (let i = 0; i < completeBtn.length; i++){
     convertedDevBoardCount = convertedDevBoardCount + 1;
     devBoardCount.innerText = convertedDevBoardCount;
 
+    
+    // Activity History Add
+    let historyContainer = document.createElement('div');
+    historyContainer.innerHTML = `
+    <p class="bg-slate-100 p-2 rounded-lg">
+    You have Complete The Task ${'tasktitle'} at ${formatDate()}
+    </p>
+    `;
+
+    activityHistory.appendChild(historyContainer);
+    
     // After All button Clicked
     if (convertedTaskCount === 0) {
       alert('congrates!!! You have completed all the current task')
     }
-
-    // Activity History Add
   })
 }
+
+//after click clear activityHistory.innerHTML = ``
+
+document.getElementById('clearHistory').addEventListener('click', function () {
+  activityHistory.innerHTML = ``
+})
 
