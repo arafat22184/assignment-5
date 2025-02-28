@@ -19,7 +19,7 @@ function formatDate() {
     return timeString;
 }
 
-
+// Completed-Btn
 for (let i = 0; i < completeBtn.length; i++){
   const compBtn = completeBtn[i];
 
@@ -94,3 +94,21 @@ document.getElementById('dateContainer').innerHTML = `
     <h3 class="font-bold text-xl">${todayDate()}</h3>
     `;
 
+// THEME CHANGE
+let docBody = document.getElementById('docBody');
+let themeColors = ['bg-red-200','bg-blue-500', 'bg-orange-200', 'bg-lime-200', 'bg-purple-200', 'bg-cyan-200', 'bg-green-200', 'bg-blue-300'];
+let count = 0;
+
+document.getElementById('theme-clr').addEventListener('click', function () {
+  if (count < themeColors.length) {
+    docBody.classList.remove('bg-slate-200');
+    docBody.classList.add(themeColors[count]);
+    docBody.classList.remove(themeColors[count - 1]);
+    count++;
+  }
+  else {
+    docBody.classList.remove(themeColors[themeColors.length]);
+    docBody.classList.add('bg-slate-200');
+    count = 0;
+  }
+})
