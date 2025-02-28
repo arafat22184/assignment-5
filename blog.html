@@ -30,6 +30,66 @@
       </div>
     </nav>
   </header>
+
+  <main class="w-11/12 m-auto">
+    <h1 class="font-bold text-3xl text-center my-6">Blogs</h1>
+
+    <!-- Question-1 -->
+    <div class="bg-white rounded-lg p-8 mb-5">
+      <h3 class="font-semibold text-xl border-b-2 border-slate-300 border-dashed pb-4">Question-1: What are the different ways to select an element in the DOM?</h3>
+      <p class="mt-2">There are 5 different ways to select element in Dom
+        <ol class="list-decimal pl-10">
+          <li>getElementById</li>
+          <li>getElementsByClass</li>
+          <li>getElementsByTagName</li>
+          <li>querySelector</li>
+          <li>querySelectorAll</li>
+        </ol>
+      </p>
+    </div>
+
+    <!-- Question-2 -->
+    <div class="bg-white rounded-lg p-8 mb-5">
+      <h3 class="font-semibold text-xl border-b-2 border-slate-300 border-dashed pb-4">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h3>
+      <p class="mt-2">
+        <ul class="list-disc pl-10">
+        <li>innerHTML returns child html with all comments and everything</li>
+        <li>innerText returns current element innerText</li>
+        <li>textContent return current element innerText with hidden text</li>
+      </ul>
+     </p>
+    </div>
+
+    <!-- Question-3 -->
+    <div class="bg-white rounded-lg p-8 mb-5">
+      <h3 class="font-semibold text-xl border-b-2 border-slate-300 border-dashed pb-4">Question-3: What is event delegation in the DOM?</h3>
+      <p class="mt-2">
+        when need to add event in parent > multiple child<br>
+         delegation can handle it more easily
+         by bubbling system
+      </p>
+    </div>
+
+    <!-- Question-4 -->
+    <div class="bg-white rounded-lg p-8 mb-5">
+      <h3 class="font-semibold text-xl border-b-2 border-slate-300 border-dashed pb-4">Question-4: What is event bubbling in the DOM?</h3>
+      <p class="mt-2">
+        when an event fire > capture phase> bubbling > eventCalled >bubbling to top like document window
+        bubbling can be stop by stopPropagation/stopImmediatePropagation
+      </p>
+    </div>
+
+    <!-- Question-5 -->
+    <div class="bg-white rounded-lg p-8 mb-5">
+      <h3 class="font-semibold text-xl border-b-2 border-slate-300 border-dashed pb-4">Question-5: How do you create, add, and remove elements using JavaScript?</h3>
+      <p class="mt-2">
+        <ul>
+          <li>Add: .createElement</li>
+          <li>Remove: .remove() .removeChild()</li>
+        </ul>
+      </p>
+    </div>
+  </main>
   <script src="script/blog.js"></script>
 </body>
 </html>

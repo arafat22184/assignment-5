@@ -11,7 +11,7 @@ let convertedDevBoardCount = parseInt(devBoardCount.innerText);
 // Activity Log
 let activityHistory = document.getElementById('activityHistory');
 
-// CardTime
+// ActivityTime
 function formatDate() {
     const now = new Date();
     const options = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
@@ -61,27 +61,36 @@ for (let i = 0; i < completeBtn.length; i++){
       alert('congrates!!! You have completed all the current task')
     }
   })
-}
+};
 
 // Clear History
 document.getElementById('clearHistory').addEventListener('click', function () {
-  activityHistory.innerHTML = ``
+  activityHistory.innerHTML = ``;
 })
-
-// // Theme Color
-// const themeColors = ['bg-slate-400', 'bg-red-200', 'bg-purple-300'];
-// let docBody = document.getElementById('docBody');
-// let sum = 0;
-
-// for (let i = 0; i < themeColors.length; i++) {
-//     document.getElementById('theme-clr').addEventListener('click', function () {
-//   console.log(themeColors[i]);
-// })
-//   }
 
 
 // DiscoverBtn
 document.getElementById('discoverBtn').addEventListener('click', function (event) {
   event.preventDefault();
-  window.location.href = "./blog.html"
-})
+  window.location.href = "./blog.html";
+});
+
+
+// CARD DATE
+// Today Day
+const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const d = new Date();
+let todayDay = days[d.getDay()];
+
+//Today Date
+function todayDate() {
+    let date = new Date();
+    let formatDate = { month: "short", day: "numeric", year: "numeric" };
+    return date.toLocaleDateString("en-US", formatDate).replace(',', '');
+}
+
+document.getElementById('dateContainer').innerHTML = `
+    <p class="text-xl">${todayDay},</p>
+    <h3 class="font-bold text-xl">${todayDate()}</h3>
+    `;
+
