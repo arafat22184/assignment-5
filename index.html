@@ -24,7 +24,7 @@
        <div class="flex items-center justify-center gap-9">
         <div class="flex items-center justify-center gap-4 p-4 rounded-[32px] bg-slate-100">
           <img src="assets/checkbox.png" alt="CheckBox">
-          <p class="text-3xl font-bold">23</p>
+          <p id="devBoardCount" class="text-3xl font-bold">23</p>
         </div>
         <div>
           <img class="cursor-pointer" src="assets/theme-btn.png" alt="Theme Button">
@@ -45,7 +45,7 @@
           </div>
           <div>
             <p>Task Assigned</p>
-            <h3 class="font-bold text-3xl">06</h3>
+            <h3 id="taskCount" class="font-bold text-3xl">06</h3>
           </div>
         </div>
 
@@ -80,7 +80,7 @@
               <p class="font-medium">21 March 2025</p>
             </div>
             <div>
-              <button class="cursor-pointer bg-blue-600 rounded-lg text-white font-medium px-5 py-[10px]">Completed</button>
+              <button class="cursor-pointer bg-blue-600 rounded-lg text-white font-medium px-5 py-[10px] complete-btn">Completed</button>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@
               <p class="font-medium">21 March 2025</p>
             </div>
             <div>
-              <button class="cursor-pointer bg-blue-600 rounded-lg text-white font-medium px-5 py-[10px]">Completed</button>
+              <button class="cursor-pointer bg-blue-600 rounded-lg text-white font-medium px-5 py-[10px] complete-btn">Completed</button>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@
               <p class="font-medium">21 March 2025</p>
             </div>
             <div>
-              <button class="cursor-pointer bg-blue-600 rounded-lg text-white font-medium px-5 py-[10px]">Completed</button>
+              <button class="cursor-pointer bg-blue-600 rounded-lg text-white font-medium px-5 py-[10px] complete-btn">Completed</button>
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@
               <p class="font-medium">21 March 2025</p>
             </div>
             <div>
-              <button class="cursor-pointer bg-blue-600 rounded-lg text-white font-medium px-5 py-[10px]">Completed</button>
+              <button class="cursor-pointer bg-blue-600 rounded-lg text-white font-medium px-5 py-[10px] complete-btn">Completed</button>
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@
               <p class="font-medium">21 March 2025</p>
             </div>
             <div>
-              <button class="cursor-pointer bg-blue-600 rounded-lg text-white font-medium px-5 py-[10px]">Completed</button>
+              <button class="cursor-pointer bg-blue-600 rounded-lg text-white font-medium px-5 py-[10px] complete-btn">Completed</button>
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@
               <p class="font-medium">21 March 2025</p>
             </div>
             <div>
-              <button class="cursor-pointer bg-blue-600 rounded-lg text-white font-medium px-5 py-[10px]">Completed</button>
+              <button class="cursor-pointer bg-blue-600 rounded-lg text-white font-medium px-5 py-[10px] complete-btn">Completed</button>
             </div>
           </div>
         </div>
@@ -180,8 +180,14 @@
 
       <!-- Aside Bottom -->
        <section class="p-6 pb-0">
+        <div id="activityHistory">
+          <!-- History Here -->
+        </div>
        </section>
     </aside>
   </main>
+
+  <!-- JS -->
+   <script src="script/script.js"></script>
 </body>
 </html>
