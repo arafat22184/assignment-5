@@ -39,11 +39,11 @@
       <h3 class="font-semibold text-xl border-b-2 border-slate-300 border-dashed pb-4">Question-1: What are the different ways to select an element in the DOM?</h3>
       <p class="mt-2">There are 5 different ways to select element in Dom
         <ol class="list-decimal pl-10">
-          <li>getElementById</li>
-          <li>getElementsByClass</li>
-          <li>getElementsByTagName</li>
-          <li>querySelector</li>
-          <li>querySelectorAll</li>
+          <li>.getElementById('idName')</li>
+          <li>.getElementsByClass('className')</li>
+          <li>.getElementsByTagName('htmlTagName')</li>
+          <li>.querySelector('asLikeCssSelector(. # tagname)')</li>
+          <li>.querySelectorAll(same as querySelector but querySelector only select 1 but querySelectorAll select all)</li>
         </ol>
       </p>
     </div>
@@ -53,8 +53,8 @@
       <h3 class="font-semibold text-xl border-b-2 border-slate-300 border-dashed pb-4">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h3>
       <p class="mt-2">
         <ul class="list-disc pl-10">
-        <li>innerHTML returns child html with all comments and everything</li>
-        <li>innerText returns current element innerText</li>
+        <li>innerHTML returns selected innerChild html with all comments and everything</li>
+        <li>innerText returns current element innerText only</li>
         <li>textContent return current element innerText with hidden text</li>
       </ul>
      </p>
@@ -66,7 +66,8 @@
       <p class="mt-2">
         when need to add event in parent > multiple child<br>
          delegation can handle it more easily
-         by bubbling system
+         by bubbling system<br>
+         delegation makes code not repeated
       </p>
     </div>
 
@@ -74,7 +75,7 @@
     <div class="bg-white rounded-lg p-8 mb-5">
       <h3 class="font-semibold text-xl border-b-2 border-slate-300 border-dashed pb-4">Question-4: What is event bubbling in the DOM?</h3>
       <p class="mt-2">
-        when an event fire > capture phase> bubbling > eventCalled >bubbling to top like document window
+        when an event fire > capture phase> bubbling > eventCalled >bubbling > childElement Bubbling TO parentElement like p>div>body>head>html>document<br>
         bubbling can be stop by stopPropagation/stopImmediatePropagation
       </p>
     </div>
@@ -84,8 +85,9 @@
       <h3 class="font-semibold text-xl border-b-2 border-slate-300 border-dashed pb-4">Question-5: How do you create, add, and remove elements using JavaScript?</h3>
       <p class="mt-2">
         <ul>
-          <li>Add: .createElement</li>
-          <li>Remove: .remove() .removeChild()</li>
+          <li><span class="text-blue-500">Create:</span> whereToCreate.createElement('htmlTag')</li>
+          <li><span class="text-green-500">Add:</span> whereToAdd.appendChild(whatToAdd)</li>
+          <li><span class="text-red-500">Remove:</span> whereToRemove.remove(whatToBeRemoved) whereToRemove.removeChild(whatToBeRemoved)</li>
         </ul>
       </p>
     </div>
