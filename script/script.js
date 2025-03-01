@@ -58,7 +58,7 @@ for (let i = 0; i < completeBtn.length; i++){
     
     // After All button Clicked
     if (convertedTaskCount === 0) {
-      alert('congrates!!! You have completed all the current task')
+      alert('Congrats!!! You have completed all the current task')
     }
   })
 };
